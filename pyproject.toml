@@ -4,11 +4,17 @@ version = "0.1.0"
 description = ""
 authors = ["Asher <ashish.2017@hotmail.com>"]
 readme = "README.md"
-packages = [{include = "li_message_automate"}]
+packages = [{ include = "li_message_automate" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+selenium = "^4.10.0"
+webdriver-manager = "^3.8.6"
+debugpy = "^1.6.7"
+python-decouple = "^3.8"
 
+[tool.poetry.scripts]
+app = "li_message_automate.app:from_csv"
 
 [build-system]
 requires = ["poetry-core"]
